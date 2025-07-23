@@ -1,0 +1,14 @@
+name: Remind PR to main
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment reminder
+        run: |
+          echo "::notice::New commits pushed to 'dev'. Consider opening a PR to 'main'."
